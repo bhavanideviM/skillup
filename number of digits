@@ -1,0 +1,13 @@
+def count_digits(n):
+    c1=0
+    c2=0
+    while n:
+        d=n%10
+        n=n//10
+        if d%2==0:
+            c1+=1
+        else: 
+            c2+=1
+    print(c1,c2)
+n=int(input())
+count_digits(n)
