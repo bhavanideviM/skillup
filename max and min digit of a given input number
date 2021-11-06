@@ -1,0 +1,15 @@
+def max_min(n):
+    s=n%10
+    l=n%10
+    while n:
+        d=n%10
+        n=n//10
+        if s>d:
+            s=d
+        if l<d:
+            l=d
+    print(s,l)
+            
+    
+n=int(input())
+max_min(n)
