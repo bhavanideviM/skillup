@@ -1,0 +1,20 @@
+def max_digit(n):
+    l=0
+    while n:
+        d=n%10
+        n=n//10
+        if l<d:
+            l=d
+    return l
+def count(n,m):
+    c=0
+    while n:
+        d=n%10
+        n=n//10
+        if d==m:
+            c+=1
+    return c
+n=int(input())
+m=max_digit(n)
+c=count(n,m)
+print(c)
