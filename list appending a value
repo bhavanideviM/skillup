@@ -1,0 +1,6 @@
+#to append the element and to show as list format
+n=int(input())
+data=list(map(int,input().split()))
+for i in range(n):
+    num=int(input())
+    data.append(num)
