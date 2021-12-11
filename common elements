@@ -1,0 +1,19 @@
+m,n=map(int,input().split())
+data1=list(map(int,input().split()))
+data2=list(map(int,input().split()))
+dic={}
+
+for i in data1:
+    if i not in dic:
+        dic[i]=1
+    else:
+        dic[i]+=1
+    
+for j in data2:
+    if j not in dic:
+        dic[j]=1
+    else:
+        dic[j]+=1
+for k,v in dic.items():
+    if v==2:
+        print(k)
