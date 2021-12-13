@@ -1,0 +1,13 @@
+def loopstring(s):
+    result_even = ''
+    result_odd = ''
+    for i in range(len(s)):
+        if i % 2 == 0:
+            result_even += s[i]
+        else:
+            result_odd += s[i]
+    print(result_even + ' ' + result_odd)
+
+if __name__ == '__main__':
+    for i in range(int(input())):
+        loopstring(input()) 
