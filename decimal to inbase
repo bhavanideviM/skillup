@@ -1,0 +1,25 @@
+def btod(n,b):
+    res=[]
+    while n:
+        d=n%b
+        n//=b
+        res.append(str(d))
+    return "".join(res[::-1])
+def countzeroes(n):#1000100
+    res=0#main result count
+    c=0
+    for i in n:
+        if i=='0':
+            c+=1
+            if c>res:
+                res=c
+        else:
+            c=0
+    if res==0:
+        return -1
+    return res
+n=int(input())
+b=int(input())
+bi=btod(n,b)
+res=countzeroes(bi)
+print(res)
