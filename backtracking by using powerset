@@ -1,0 +1,39 @@
+#Back tracking----11/04/2022:
+# to print all subsequences:
+"""
+def subseq(ind,n,ds,a):
+    if (ind==n):
+        print(ds)
+        return
+    #logic to pick
+    ds.append(a[ind])
+    subseq(ind+1,n,ds,a)
+    ds.pop()
+    #logic to not to pick
+    subseq(ind+1,n,ds,a)
+        
+n=int(input())
+a=list(map(int,input().split()))
+ds=[]
+subseq(0,n,ds,a)
+"""
+
+#to print subsequences having sum=2:
+def sumsubseq(i,s,ds,k):
+    if (i==n):
+        if (s==k):
+            print(ds)
+        return
+    #logic to pick
+    ds.append(a[i])
+    s+=a[i]
+    sumsubseq(i+1,s,ds,k)
+    ds.pop()
+    s-=a[i]
+    #logic to not pick
+    sumsubseq(i+1,s,ds,k)
+n,k=map(int,input().split())
+a=list(map(int,input().split()))
+ds=[]
+sumsubseq(0,0,ds,k)
+
